@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>e-Zlearning - Homepage </title>
+  </head>
+  <body>
+    {% block body %}
+      <div class="login">
+        <form class="login" action="/login" method="post">
+          <label for="email">Email : </label>
+          <input type="email" name="email" placeholder="Email" value=""><br>
+          <label for="password">Password : </label>
+          <input type="password" name="password" value=""><br>
+          <button type="submit" name="button"></button>
+        </form>
+      </div>
+    {% endblock %}
+  </body>
+</html>
