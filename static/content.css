@@ -24,3 +24,7 @@ div[class='course_content'] h2{
 iframe{
     margin:2%;
 }
+
+p{
+    font-size: 150%;
+}

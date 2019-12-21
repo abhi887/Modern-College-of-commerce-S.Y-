@@ -60,40 +60,41 @@ def llogin():
     course=request.args.get("course")
     email=request.form.get("email")
     password=request.form.get("password")
-    lstate='False'
+    # lstate='False'
     try:
         temp=list(db.execute("select lstate from signup where email=:email limit 1",{'email':email}))
         lstate=temp[0][0]
     except:
         pass
-    if lstate != 'True':
 
-        db.execute("update signup set lstate='True' where email=:email",{'email':email})
-        db.commit()
+    db.execute("update signup set lstate='True' where email=:email",{'email':email})
+    db.commit()
         
-        raw_cpass=list(db.execute("select pass from signup where email=:email",{"email":email}))
+    raw_cpass=list(db.execute("select pass from signup where email=:email",{"email":email}))
         
-        try:
-            cpass=raw_cpass[0][0]
-        except IndexError:
-            return render_template("index.html",lgstat=False)
+    try:
+        cpass=raw_cpass[0][0]
+    except IndexError:
+        return render_template("index.html",lgstat=False)
 
-        print(f"\n\n>> entered pass = {password} \t correct pass = {cpass} \n\n")
-        # print(f"\n\n>> type(entered pass) = {(password)} \t type(correct pass) = {(cpass[0:len(password)])} \n\n")
-        print(len(password)==len(cpass))
+    print(f"\n\n>> entered pass = {password} \t correct pass = {cpass} \n\n")
+    # print(f"\n\n>> type(entered pass) = {(password)} \t type(correct pass) = {(cpass[0:len(password)])} \n\n")
+    print(len(password)==len(cpass))
 
-        if password == cpass[:len(password)]:
-            # return render_template("home.html")
-            print("congrats you are logged in !")
-            # return ("congrats you are logged in !")
-            return content(course)
-        return (f"entered pass = {password} correct pass = {cpass}")
+    if password == cpass[:len(password)]:
+    # return render_template("home.html")
+        print("congrats you are logged in !")
+        # return ("congrats you are logged in !")
+        return content(course)
+        # return (f"entered pass = {password} correct pass = {cpass}")  
     # return ("congrats you are logged in !")
     # return render_template("content.html",course=course)
-    return content(course)
+    return render_template('home.html',lstate="False")
 
 @app.route("/logout")
 def logout():
+    # db.execute("update signup set lstate='False' where email=:email",{'email':email})
+    # db.commit()
     return render_template("home.html",lstate='False')
 
 def content(course):
@@ -103,6 +104,17 @@ def content(course):
     #     lstate=temp[0][0]
     # course=request.args.get("course")
     print(f"\n\ncourse = {course} ")
-    if course == None:
-        return render_template("home.html")
+    # if course == None:
+        # return render_template("home.html")
+        # course="tbrush"
     return render_template("content.html",course=course)
+
+@app.route("/test")
+def test():
+    course=request.args.get("course")
+    return render_template("test.html",course=course)
+
+
+if __name__ == '__main__':
+    port = int(os.environ.get("PORT", 5000))
+    app.run(debug=True,host='0.0.0.0', port=port)

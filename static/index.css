@@ -1,5 +1,8 @@
-html{
-    font-family: font-family: 'Nunito', sans-serif;;
+html,body{
+    font-family: font-family: 'Nunito', sans-serif;
+    background-image:url("");
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 .site_name{
