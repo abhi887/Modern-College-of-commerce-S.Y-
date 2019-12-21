@@ -109,6 +109,11 @@ def content(course):
         # course="tbrush"
     return render_template("content.html",course=course)
 
+@app.route("/tc")
+def tc():
+    course=request.args.get("course")
+    return render_template("content.html",course=course)
+
 @app.route("/test")
 def test():
     course=request.args.get("course")
