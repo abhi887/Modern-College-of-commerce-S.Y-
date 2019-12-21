@@ -1,0 +1,120 @@
+{% extends "index.html" %}
+{% block body %}
+<script type="text/javascript" src="{{url_for('static',filename='content.js')}}"></script>
+<link type="text/css" rel="stylesheet" href="{{url_for('static',filename='content.css' )}}">
+<link href="https://fonts.googleapis.com/css?family=Lakki+Reddy&display=swap" rel="stylesheet"> 
+<a href="/logout"><button>Logout</button></a>
+<!-- <div class="hidden" style="display: none;">
+  <h6 id="lstate">{{lstate}}</h6>
+</div> -->
+{% if course == 'tbrush' %}
+<div class="course_content">
+  <h2>How to brush tooth ?</h2><br>
+  <div class="text">
+    <h3>Text</h3><hr>
+    <p>Some text</p>
+  </div>
+  <div class="video">
+    <h3>Video</h3><hr>
+      <h4>Cartoon</h4>
+      <iframe id="ytplayer" type="text/html" width="1000" height="500"
+  src="https://www.youtube.com/embed/BapR9J86ZZw?autoplay=1&origin=http://example.com"
+  frameborder="0"></iframe>
+  <h4>Tutorial</h4>
+      <iframe id="ytplayer" type="text/html" width="1000" height="500"
+  src="https://www.youtube.com/embed/aOebfGGcjVw?autoplay=1&origin=http://example.com"
+  frameborder="0"></iframe>
+      <!-- <a href="https://www.youtube.com/watch?v=BapR9J86ZZw">
+      <a href="https://www.youtube.com/watch?v=aOebfGGcjVw"> -->
+  </div>
+  <button type="button" name="test">Take Test</button>
+</div>
+{% elif course == 'shoeknot' %}
+<div class="course_content">
+<h2>How to tie a Shoe Knot ?</h2>
+<div class="text">
+  <h3>Text</h3>
+  <p>Some text</p>
+</div>
+<div class="video">
+  <h3>Video</h3>
+  <h4>Cartoon</h4>
+    <iframe id="ytplayer" type="text/html" width="1000" height="500"
+src="https://www.youtube.com/embed/BeSkBOYUlag?autoplay=1&origin=http://example.com"
+frameborder="0"></iframe>
+<h4>Tutorial</h4>
+<iframe id="ytplayer" type="text/html" width="1000" height="500"
+src="https://www.youtube.com/embed/VA4AACzlhe8?autoplay=1&origin=http://example.com"
+frameborder="0"></iframe>
+   
+</div>
+<button type="button" name="test">Take Test</button>
+</div>
+<div class="course_content">
+{% elif course == 'exercise' %}
+<h2>Importance of Daily Exercise.</h2>
+<div class="text">
+  <h3>Text</h3>
+  <p>Some text</p>
+</div>
+<div class="video">
+  <h3>Video</h3>
+    <h4>Cartoon</h4>
+    <iframe id="ytplayer" type="text/html" width="1000" height="500"
+    src="https://www.youtube.com/embed/oc4QS2USKmk?autoplay=1&origin=http://example.com"
+    frameborder="0"></iframe>
+    <h4>Tutorial</h4>
+    <iframe id="ytplayer" type="text/html" width="1000" height="500"
+    src="https://www.youtube.com/embed/aHVR2FnTpdk?autoplay=1&origin=http://example.com"
+    frameborder="0"></iframe>
+</div>
+<button type="button" name="test">Take Test</button>
+</div>
+{% elif course == 'commper' %}
+<div class="course_content">
+<h2>How to greet a person ?</h2>
+<div class="text">
+  <h3>Text</h3>
+  <p>Some text</p>
+</div>
+<div class="video">
+  <h3>Video</h3>
+   
+    <h4>Cartoon</h4>
+    <iframe id="ytplayer" type="text/html" width="1000" height="500"
+    src="https://www.youtube.com/embed/61Qb05MuZ98?autoplay=1&origin=http://example.com"
+    frameborder="0"></iframe>
+    <h4>Tutorial</h4>
+    <iframe id="ytplayer" type="text/html" width="1000" height="500"
+    src="https://www.youtube.com/embed/BO0FV1vV8iM?autoplay=1&origin=http://example.com"
+    frameborder="0"></iframe>
+   
+</div>
+<button type="button" name="test">Take Test</button>
+</div>
+</div>
+{% elif course == 'commgrp' %}
+<div class="course_content">
+<h2>How to communicate with a group of people ?</h2>
+<div class="text">
+  <h3>Text</h3>
+  <p>Some text</p>
+</div>
+<div class="video">
+  <h3>Video</h3>
+    <h4>Cartoon</h4>
+    <iframe id="ytplayer" type="text/html" width="1000" height="500"
+    src="https://www.youtube.com/embed/oc4QS2USKmk?autoplay=1&origin=http://example.com"
+    frameborder="0"></iframe>
+    <h4>Tutorial</h4> -->
+    <iframe id="ytplayer" type="text/html" width="1000" height="500"
+    src="https://www.youtube.com/embed/PWPQ5ogPXCc?autoplay=1&origin=http://example.com"
+    frameborder="0"></iframe>
+  </div>
+    <!-- <a href="https://www.youtube.com/watch?v=oc4QS2USKmk">
+    <a href="https://www.youtube.com/watch?v=PWPQ5ogPXCc">
+   
+</div>
+<button type="button" name="test">Take Test</button>
+{% endif %}
+{% endblock %}

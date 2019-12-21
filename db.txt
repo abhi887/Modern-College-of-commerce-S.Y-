@@ -1,0 +1,14 @@
+Host
+    ec2-174-129-255-26.compute-1.amazonaws.com
+Database
+    dbjj03i1i59rte
+User
+    fohlyfbheobcwn
+Port
+    5432
+Password
+    9aac05c70e29aedf00762800caa0f8b7d173528403b8aa4ce5bece859d878d64
+URI
+    postgres://fohlyfbheobcwn:9aac05c70e29aedf00762800caa0f8b7d173528403b8aa4ce5bece859d878d64@ec2-174-129-255-26.compute-1.amazonaws.com:5432/dbjj03i1i59rte
+Heroku CLI
+    heroku pg:psql postgresql-concave-47898 --app e-zlearning

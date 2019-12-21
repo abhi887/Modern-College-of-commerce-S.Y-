@@ -1,0 +1,82 @@
+{% extends "index.html" %}
+{% block body %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='home.css' )}}">
+<div class="hidden" style="display: none;">
+    <h6 id="lstate">{{lstate}}</h6>
+  </div>
+<div class="courses">
+<!-- <div class="jumbotron" id="daily_routines"> -->
+<div id="daily_routines">
+  <h3>Routine Skills </h3><hr>
+  <table>
+    <td>
+      <div id="course" class="card" style="width: 18rem;">
+          <!-- <img src="https://www.northlandpediatricsmiles.com/wp-content/uploads/sites/69/2018/08/toothpaster-for-your-child.jpg" class="card-img-top" alt="..."> -->
+          <img src="https://cdn.dribbble.com/users/75542/screenshots/4537255/startfresh_dribbble2.gif" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">How to brush teeth ?</h5>
+            <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+            <a href="/login?course=tbrush&lstate={{lstate}}" class="btn btn-primary stretched-link">Learn</a>
+          </div>
+      </div>
+    </td>
+    <td>
+      <div id="course" class="card" style="width: 18rem;">
+        <!-- <img src="https://banner2.kisspng.com/20180315/xtq/kisspng-shoe-sneakers-converse-free-content-clip-art-shoes-cliparts-transparent-5aaa3005c1d788.111622621521102853794.jpg" class="card-img-top" alt="..."> -->
+        <img src="https://cdn.dribbble.com/users/287797/screenshots/2519355/shoes.gif" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">How to tie a shoe knot ?</h5>
+          <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+          <a href="/login?course=shoeknot&lstate={{lstate}}" class="btn btn-primary stretched-link">Learn</a>
+        </div>
+      </div>
+    </td>
+    <td>
+      <div id="course" class="card" style="width: 18rem;">
+        <img src="https://media.giphy.com/media/3ornk8qaF9ytl9zmY8/giphy.gif" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Importance of Daily Exercise.</h5>
+          <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+          <a href="/login?course=exercise&lstate={{lstate}}" class="btn btn-primary stretched-link">Learn</a>
+        </div>
+      </div>
+    </td>
+      <!-- <span class="course"><a href="/content?course=tbrush"><li>How to brush teeth ?</li></a></span> -->
+      <!-- <span class="course"><a href="/content?course=shoeknot"><li>How to tie a shoe knot ?</li></a></span> -->
+      <!-- <span class="course"><a href="/content?course=exercise"><li>Importance of Daily Exercise.</li></a></span> -->
+    </table>
+    </div>
+  <div id="comm_skill">
+    <h3>Speaking Skills  </h3><hr>
+    <table>
+      <td>
+          <div id="course" class="card" style="width: 18rem;">
+              <!-- <img src="https://media.giphy.com/media/3ornk8qaF9ytl9zmY8/giphy.gif" class="card-img-top" alt="..."> -->
+              <img src="https://media.giphy.com/media/l1J9x53ez95vEafrG/giphy.gif" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">How to greet a person ?</h5>
+                <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+                <a href="/login?course=commper&lstate={{lstate}}" class="btn btn-primary stretched-link">Learn</a>
+              </div>
+            </div>
+      </td>
+      <td>
+          <div id="course" class="card" style="width: 18rem;">
+              <!-- <img src="https://media.giphy.com/media/3ornk8qaF9ytl9zmY8/giphy.gif" class="card-img-top" alt="..."> -->
+              <img src="https://media.giphy.com/media/l1J9Llv1ztqa8cjZe/giphy.gif" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">How to communicate with a group of people ?</h5>
+                <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+                <a href="/login?course=commgrp&lstate={{lstate}}" class="btn btn-primary stretched-link">Learn</a>
+              </div>
+            </div>
+      </td>
+      <!-- <span class="course"><a class="course" href="/content?course=commper"><li>How to greet a person ?</li></a></span> -->
+      <!-- <span class="course"><a href="/content?course=commgrp"><li>How to communicate with a group of people ?</li></a></span> -->
+    </table>
+    </div>
+  </div>
+  {% if lstate == 'True' %}
+  <a href="/logout"><button>Logout</button></a>
+  {% endif %}
+{% endblock %}

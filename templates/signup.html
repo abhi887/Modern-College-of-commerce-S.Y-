@@ -1,0 +1,46 @@
+{% extends "index.html" %}
+{% block body %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='signup.css') }}">
+<center>
+<div class="signup">
+  <form class="signup" action="/ssign" method="post">
+    <table>
+      <tr>
+        <td>
+          <!-- <label for="email">Email : </label><br> -->
+        </td>
+        <td>
+          <!-- <label for="pname">Parent Name : </label><br> -->
+        </td>
+      </tr>
+        <tr>
+          <td>
+            <input required type="email" class="form-control" name="email" placeholder="Email" value=""><br>
+          </td>
+          <td>
+            <input type="text" name="pname" class="form-control" placeholder="Parent name" value=""><br>
+          </td>
+        </tr>
+    </table>
+    <!-- <label for="name">Student Name : </label><br> -->
+    <input required type="text" name="sname" class="form-control" placeholder="Student name" value=""><br>
+    <!-- <label for="scname">School Name : </label><br> -->
+    <input type="text" class="form-control" name="scname" placeholder="School name" value=""><br>
+    <!-- <label for="contactno">Contact no : </label><br> -->
+    <input required type="text" name="contactno" class="form-control" placeholder="Contact no" value=""><br>
+    <table>
+      <tr>
+        <!-- <td><label for="password">Password : </label><br></td> -->
+        <!-- <td><label for="repassword">Confirm Password : </label><br></td> -->
+      </tr>
+      <tr>
+        <td><input required type="password" name="password" class="form-control" placeholder="Password" value=""><br></td>
+        <td><input required type="password" name="repassword" class="form-control" placeholder="Confirm Password" value=""><br></td>
+      </tr>
+    </table>
+    <button type="submit" name="button" class="btn btn-outline-success" >Signup</button><br>
+  </form>
+</div>
+</center>
+<center><a href="/">already registered !</a></center>
+{% endblock %}

@@ -1,0 +1,19 @@
+html{
+    font-family: font-family: 'Nunito', sans-serif;;
+}
+
+.site_name{
+    margin-top:4%;
+    font-size:150%;
+    font-family: 'Lobster', cursive;
+}
+
+.login_form{
+    margin-top:5%;
+    margin-bottom:2%;
+    width:30%;
+}
+
+h3{
+    text-align: left;
+}

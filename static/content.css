@@ -1,0 +1,26 @@
+.site_name{
+    margin-top:2%;
+}
+
+div[class="course_content"]{
+    margin-top:2%;
+    margin-left:20%;
+}
+
+div[class='video'] h3{
+    margin-left:-5%;
+}
+
+div[class="text"] h3{
+    margin-left:-5%;
+}
+
+div[class='course_content'] h2{
+    margin-left: -5%;
+    font-family: 'Lakki Reddy', cursive;
+    font-size: 210%;
+}
+
+iframe{
+    margin:2%;
+}
