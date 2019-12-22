@@ -7,8 +7,9 @@
 <div class="courses">
 <!-- <div class="jumbotron" id="daily_routines"> -->
 <div id="daily_routines">
-  <h3>Routine Skills </h3><hr>
-  <table>
+  <h3>Routine Skills </h3>
+  <div class="table-responsive-sm">
+  <table class="table">
     <td>
       <div id="course" class="card" style="width: 18rem;">
           <!-- <img src="https://www.northlandpediatricsmiles.com/wp-content/uploads/sites/69/2018/08/toothpaster-for-your-child.jpg" class="card-img-top" alt="..."> -->
@@ -45,10 +46,12 @@
       <!-- <span class="course"><a href="/content?course=shoeknot"><li>How to tie a shoe knot ?</li></a></span> -->
       <!-- <span class="course"><a href="/content?course=exercise"><li>Importance of Daily Exercise.</li></a></span> -->
     </table>
+  </div>
     </div>
-  <div id="comm_skill">
-    <h3>Speaking Skills  </h3><hr>
-    <table>
+    <div id="comm_skill">
+    <h3>Speaking Skills  </h3>
+    <div class="table-responsive-sm">
+    <table class="table">
       <td>
           <div id="course" class="card" style="width: 18rem;">
               <!-- <img src="https://media.giphy.com/media/3ornk8qaF9ytl9zmY8/giphy.gif" class="card-img-top" alt="..."> -->
@@ -75,8 +78,6 @@
       <!-- <span class="course"><a href="/content?course=commgrp"><li>How to communicate with a group of people ?</li></a></span> -->
     </table>
     </div>
+    </div>
   </div>
-  {% if lstate == 'True' %}
-  <a href="/logout"><button>Logout</button></a>
-  {% endif %}
 {% endblock %}

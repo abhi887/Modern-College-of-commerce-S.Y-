@@ -4,7 +4,7 @@
 
 div[class="course_content"]{
     margin-top:2%;
-    margin-left:20%;
+    margin-left:15%;
 }
 
 div[class='video'] h3{
@@ -13,6 +13,13 @@ div[class='video'] h3{
 
 div[class="text"] h3{
     margin-left:-5%;
+}
+
+div[class="text"]{
+    width:81%;
+    border-radius:5px 5px;
+    padding:4%;
+    background-color: rgba(0,0,0,0.6);
 }
 
 div[class='course_content'] h2{
@@ -25,6 +32,23 @@ iframe{
     margin:2%;
 }
 
-p{
+p,li{
     font-size: 150%;
+}
+
+button{
+    padding:1%;
+    background-color:red;
+}
+
+a button[id="gameplay"]{
+    margin-top:2%;
+    color:white;
+    margin-bottom:4%;
+    font-size: 120%;
+    border-radius:5px 5px;
+    border-color:transparent;
+    box-shadow:2px 2px 5px black;
+    background-color:green;
+    width:80%;
 }

@@ -3,23 +3,27 @@
   <head>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/8db7a4d75f.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='index.css') }}">
     <meta charset="utf-8">
     <title>e-Zlearning - Homepage </title>
   </head>
   <body>
     <div class="site_name">
-    <center><h1 style="font-size: 220%;">e-zlearning</h1></center>
+    <center><h1 style="font-size: 220%;"><i class="fas fa-gamepad"></i> e-zlearning</h1></center>
+    {% if lstate == 'True' %}
+      <a id="logout" href="/logout"><button>Logout</button></a>
+    {% endif %}
   </div>
     {% block body %}
       <center>
         <div class="login_form">
         {% if jst_signuped == True %}
-        <div class="alert alert-success" role="alert">
+        <div class="alert alert-success" id="lgstat" role="alert">
             Signup successful !
         </div>
         {% elif lgstat == False %}
-        <div class="alert alert-danger" role="alert">
+        <div class="alert alert-danger" id="lgstat" role="alert">
             Please check your email and password and try again !
           </div>
         {% endif %}
@@ -27,14 +31,14 @@
         <form class="login" action="/llogin?course={{course}}" method="post">
               <div class="form-group">
                 <label for="exampleInputEmail1">Email address</label>
-                <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <input type="email" name="email" placeholder="Email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                 <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
               </div>
               <div class="form-group">
                 <label for="exampleInputPassword1">Password</label>
-                <input type="password" name="password" class="form-control" id="exampleInputPassword1">
+                <input type="password" name="password" placeholder="Password" class="form-control" id="exampleInputPassword1">
               </div>
-              <button type="submit" class="btn btn-primary">Login</button>
+              <button type="submit" class="btn btn-success">Login</button>
           <!-- <label for="email">Email : </label>
           <input required type="email" name="email" placeholder="Email" value=""><br>
           <label for="password">Password : </label>

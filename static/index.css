@@ -1,22 +1,56 @@
-html,body{
+head,body{
     font-family: font-family: 'Nunito', sans-serif;
-    background-image:url("");
-    background-size: contain;
+    /* background-image:url("bg4.jpg"); */
+    /* background-image:url("https://d2d00szk9na1qq.cloudfront.net/Product/ade6729a-4ac4-43b3-896a-ef5773717577/Images/Large_0427295.jpg"); */
+    background-image:url("http://www.hdwallpaperspulse.com/wp-content/uploads/2016/11/21/rio-2-cartoon-movie-image.jpg");
+    background-size: cover;
     background-repeat: no-repeat;
+    color:white;
 }
 
 .site_name{
     margin-top:4%;
     font-size:150%;
     font-family: 'Lobster', cursive;
+    text-shadow:2px 2px 2px black;
 }
 
 .login_form{
     margin-top:5%;
     margin-bottom:2%;
     width:30%;
+    text-shadow:2px 2px 2px black;
 }
 
 h3{
     text-align: left;
+}
+
+td{
+    text-shadow:0px 0px 0px black;
+    color:black;
+}
+
+a{
+    color:yellow;
+    text-shadow:2px 2px 2px red;
+}
+
+button[class="loggerin"]{
+    background-color:green;
+}
+
+div[id="lgstat"]{
+    text-shadow:0px 0px 0px transparent;
+}
+
+#logout{
+    margin-top:-3%;
+    margin-right:5%;
+    background-color:red;
+    border-color:transparent;
+    border-radius:5px 5px;
+    box-shadow: 2px 2px 5px black;
+    float:right;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
