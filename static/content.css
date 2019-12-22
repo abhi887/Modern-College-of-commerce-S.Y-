@@ -4,7 +4,8 @@
 
 div[class="course_content"]{
     margin-top:2%;
-    margin-left:15%;
+    margin-left:15%;    
+    text-shadow:2px 2px 2px black;
 }
 
 div[class='video'] h3{
@@ -52,3 +53,71 @@ a button[id="gameplay"]{
     background-color:green;
     width:80%;
 }
+
+@media only screen and (max-device-width: 600px) {
+    html{
+        background-image:url("http://www.hdwallpaperspulse.com/wp-content/uploads/2016/11/21/rio-2-cartoon-movie-image.jpg");
+        background-size:cover;
+        background-position: center;
+        height:100%;
+        background-repeat: repeat;
+    }
+    body,head{
+        background-image:rgba(0, 0, 0, 0);
+    }
+    body{
+        font-size: 250%;
+    }
+    div[class="course_content"]{
+        margin-top:20%;
+        margin-left:2%;    
+        text-shadow:2px 2px 2px black;
+    }
+    div[class="text"]{
+        margin-left:3%;
+        width:100%;
+        border-radius:5px 5px;
+        padding:4%;
+        background-color: rgba(0,0,0,0.6);
+    }
+    div[class='video'] h3{
+        margin-left:-1%;
+    }
+    
+    div[class="text"] h3{
+        margin-left:-2%;
+    }
+    h2{
+        text-align: center;
+    }
+    h3{
+        font-size: 200%;
+    }
+    a[class="btn btn-primary stretched-link"]{
+        font-size: 90%;
+    }
+    #logout{
+        margin-top:-10%;
+        margin-right:-4%;
+        padding: 0;
+        font-size: 60%;
+        background-color:red;
+        border-color:transparent;
+        border-radius:5px 5px;
+        box-shadow: 2px 2px 5px black;
+        float:right;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    a button[id="gameplay"]{
+        margin-top:2%;
+        margin-left:3%;
+        color:white;
+        margin-bottom:4%;
+        font-size: 120%;
+        border-radius:5px 5px;
+        border-color:transparent;
+        box-shadow:2px 2px 5px black;
+        background-color:green;
+        width:100%;
+    }
+  }

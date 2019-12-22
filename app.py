@@ -60,6 +60,8 @@ def llogin():
     course=request.args.get("course")
     email=request.form.get("email")
     password=request.form.get("password")
+    if (course == None or course == " "):
+        return render_template("index.html")
     lstate='False'
     try:
         temp=list(db.execute("select lstate from signup where email=:email limit 1",{'email':email}))
@@ -78,17 +80,13 @@ def llogin():
         return render_template("index.html",lgstat=False)
 
     print(f"\n\n>> entered pass = {password} \t correct pass = {cpass} \n\n")
-    # print(f"\n\n>> type(entered pass) = {(password)} \t type(correct pass) = {(cpass[0:len(password)])} \n\n")
     print(len(password)==len(cpass))
 
     if password == cpass[:len(password)]:
-    # return render_template("home.html")
+        if (course == None or course == " "):
+            return render_template("index.html",lstate="True")
         print("congrats you are logged in !")
-        # return ("congrats you are logged in !")
         return content(course)
-        # return (f"entered pass = {password} correct pass = {cpass}")  
-    # return ("congrats you are logged in !")
-    # return render_template("content.html",course=course)
     return render_template('index.html',lstate="False",lgstat=False)
 
 @app.route("/logout")

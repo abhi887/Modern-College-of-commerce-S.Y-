@@ -26,6 +26,17 @@ td{
 }
 
 @media only screen and (max-device-width: 600px) {
+    html{
+        background-image:url("http://www.hdwallpaperspulse.com/wp-content/uploads/2016/11/21/rio-2-cartoon-movie-image.jpg");
+        background-size:cover;
+        background-position: center;
+        /* background-attachment: scroll; */
+        height:100%;
+        /* width:120%; */
+    }
+    body,head{
+        background-image:rgba(0, 0, 0, 0);
+    }
     body{
         font-size: 250%;
     }
@@ -50,4 +61,17 @@ td{
     table{
         width: 190%;
     }
+    #logout{
+        top:0;
+        right: 0;
+        font-size: 30%;
+        position: fixed;
+        background-color:red;
+        border-color:transparent;
+        border-radius:5px 5px;
+        box-shadow: 2px 2px 5px black;
+        float:right;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
   }

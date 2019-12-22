@@ -1,11 +1,16 @@
-head,body{
-    font-family: font-family: 'Nunito', sans-serif;
+html{
+    font-family: font-family 'Nunito', sans-serif;
     /* background-image:url("bg4.jpg"); */
     /* background-image:url("https://d2d00szk9na1qq.cloudfront.net/Product/ade6729a-4ac4-43b3-896a-ef5773717577/Images/Large_0427295.jpg"); */
     background-image:url("http://www.hdwallpaperspulse.com/wp-content/uploads/2016/11/21/rio-2-cartoon-movie-image.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     color:white;
+}
+
+body{
+    color:white;
+    background-color: transparent;
 }
 
 .site_name{
@@ -54,3 +59,53 @@ div[id="lgstat"]{
     float:right;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+@media only screen and (max-device-width: 600px) {
+    html{
+        background-image:url("http://www.hdwallpaperspulse.com/wp-content/uploads/2016/11/21/rio-2-cartoon-movie-image.jpg");
+        background-size:cover;
+        background-position: center;
+        height:100%;
+    }
+    body,head{
+        background-image:rgba(0, 0, 0, 0);
+    }
+    .login_form{
+        font-size:150%;
+        width:50%;
+    }
+    form[class="login"] input{
+        padding:10%;
+        font-size: 60%;
+    }
+    button[type="submit"]{
+        padding:5%;
+        font-size:60%;
+    }
+    small[id="emailHelp"]{
+        font-size:60%;
+    }
+    body{
+        font-size: 250%;
+    }
+    h3{
+        font-size: 200%;
+    }
+    a[class="btn btn-primary stretched-link"]{
+        font-size: 90%;
+    }
+    table{
+        width: 190%;
+    }
+    #logout{
+        /* margin-top:-10%; */
+        margin-right:0%;
+        background-color:red;
+        border-color:transparent;
+        border-radius:5px 5px;
+        box-shadow: 2px 2px 5px black;
+        float:right;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
+  }
